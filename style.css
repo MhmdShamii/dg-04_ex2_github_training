@@ -47,3 +47,15 @@ body {
 .nav-list a:hover {
     color: #16a34a;
 }
+/* Small screens */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .nav-list {
+        gap: 20px;
+    }
+}

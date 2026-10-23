@@ -3,10 +3,330 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DigitalHub – We provide Full Stack Website, Mobile App, and DevOps services tailored to your business needs.">
     <link rel="stylesheet" href="style.css">
-    <title>the Matrix</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>DigitalHub – Our Services</title>
 </head>
 <body>
-    
+
+    <!-- Hidden checkboxes that control modal visibility -->
+    <input type="checkbox" id="toggle-fullstack" class="modal-toggle">
+    <input type="checkbox" id="toggle-mobile"    class="modal-toggle">
+    <input type="checkbox" id="toggle-devops"    class="modal-toggle">
+
+    <!-- ===== SERVICES SECTION ===== -->
+    <section class="services-section" id="services">
+
+        <!-- Section Header -->
+        <div class="section-header">
+            <span class="section-badge">What We Do</span>
+            <h1 class="section-title">Our <span class="highlight">Services</span></h1>
+            <p class="section-subtitle">
+                We craft digital experiences that drive results. Click any service to discover how we can help you grow.
+            </p>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="cards-grid">
+
+            <!-- Card 1: Full Stack Website -->
+            <label class="service-card" for="toggle-fullstack" tabindex="0" role="button" aria-label="Learn more about Full Stack Website development">
+                <div class="card-glow"></div>
+                <div class="card-icon-wrapper">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2"/>
+                            <path d="M8 21h8M12 17v4"/>
+                            <path d="m7 10 3 3 7-7"/>
+                        </svg>
+                    </div>
+                </div>
+                <h2 class="card-title">Full Stack Website</h2>
+                <p class="card-desc">End-to-end web solutions — from pixel-perfect frontends to robust, scalable backends.</p>
+                <ul class="card-tags">
+                    <li>React / Next.js</li>
+                    <li>Node.js / APIs</li>
+                    <li>Databases</li>
+                </ul>
+                <div class="card-cta">
+                    <span>Explore Service</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </div>
+            </label>
+
+            <!-- Card 2: Mobile App (Featured) -->
+            <label class="service-card featured" for="toggle-mobile" tabindex="0" role="button" aria-label="Learn more about Mobile App development">
+                <div class="card-glow"></div>
+                <div class="featured-badge">Most Popular</div>
+                <div class="card-icon-wrapper">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="5" y="2" width="14" height="20" rx="2"/>
+                            <circle cx="12" cy="18" r="1"/>
+                            <path d="M9 6h6"/>
+                        </svg>
+                    </div>
+                </div>
+                <h2 class="card-title">Mobile App</h2>
+                <p class="card-desc">Native and cross-platform apps that deliver seamless experiences on iOS and Android.</p>
+                <ul class="card-tags">
+                    <li>React Native</li>
+                    <li>Flutter</li>
+                    <li>iOS & Android</li>
+                </ul>
+                <div class="card-cta">
+                    <span>Explore Service</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </div>
+            </label>
+
+            <!-- Card 3: DevOps -->
+            <label class="service-card" for="toggle-devops" tabindex="0" role="button" aria-label="Learn more about DevOps services">
+                <div class="card-glow"></div>
+                <div class="card-icon-wrapper">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2a10 10 0 0 1 10 10c0 2.8-1.1 5.3-2.9 7.2"/>
+                            <path d="M12 22a10 10 0 0 1-10-10c0-2.8 1.1-5.3 2.9-7.2"/>
+                            <path d="M2 12h4M18 12h4M12 6V2M12 22v-4"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                    </div>
+                </div>
+                <h2 class="card-title">DevOps</h2>
+                <p class="card-desc">Automate, deploy, and scale your infrastructure with modern CI/CD pipelines and cloud solutions.</p>
+                <ul class="card-tags">
+                    <li>CI/CD Pipelines</li>
+                    <li>Docker / K8s</li>
+                    <li>Cloud & Monitoring</li>
+                </ul>
+                <div class="card-cta">
+                    <span>Explore Service</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </div>
+            </label>
+
+        </div><!-- /cards-grid -->
+    </section>
+
+    <!-- ===== MODALS ===== -->
+
+    <!-- Modal: Full Stack Website -->
+    <div class="modal-overlay" id="modal-fullstack">
+        <div class="modal-box">
+            <!-- Close label unchecks the checkbox -->
+            <label class="modal-close" for="toggle-fullstack" aria-label="Close modal">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </label>
+
+            <div class="modal-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2"/>
+                    <path d="M8 21h8M12 17v4"/>
+                    <path d="m7 10 3 3 7-7"/>
+                </svg>
+            </div>
+
+            <h2 class="modal-title">Full Stack Website Development</h2>
+            <p class="modal-subtitle">Complete web solutions from concept to deployment</p>
+
+            <div class="modal-divider"></div>
+
+            <p class="modal-body">
+                We build high-performance, fully responsive websites that look stunning and function flawlessly. Our team handles everything — from crafting intuitive user interfaces to engineering powerful server-side systems and secure databases. Whether you need a landing page, a SaaS platform, or a large-scale enterprise web application, we deliver with precision and speed.
+            </p>
+
+            <div class="modal-features">
+                <h3 class="modal-features-title">What's Included</h3>
+                <ul class="modal-feature-list">
+                    <li>
+                        <span class="feature-icon">✦</span>
+                        <div>
+                            <strong>Frontend Development</strong>
+                            <p>Modern UIs with React, Next.js, or Vue — fully responsive and accessible.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="feature-icon">✦</span>
+                        <div>
+                            <strong>Backend & REST APIs</strong>
+                            <p>Scalable server-side logic with Node.js, Express, or Django.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="feature-icon">✦</span>
+                        <div>
+                            <strong>Database Architecture</strong>
+                            <p>Efficient schema design using PostgreSQL, MongoDB, or Firebase.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="feature-icon">✦</span>
+                        <div>
+                            <strong>Authentication & Security</strong>
+                            <p>Robust auth systems, role-based access control, and data encryption.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="feature-icon">✦</span>
+                        <div>
+                            <strong>Performance Optimization</strong>
+                            <p>Fast load times, SEO-ready markup, and Core Web Vitals compliance.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <label class="modal-btn" for="toggle-fullstack">Get Started →</label>
+        </div>
+    </div>
+
+    <!-- Modal: Mobile App -->
+    <div class="modal-overlay" id="modal-mobile">
+        <div class="modal-box">
+            <label class="modal-close" for="toggle-mobile" aria-label="Close modal">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </label>
+
+            <div class="modal-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="5" y="2" width="14" height="20" rx="2"/>
+                    <circle cx="12" cy="18" r="1"/>
+                    <path d="M9 6h6"/>
+                </svg>
+            </div>
+
+            <h2 class="modal-title">Mobile App Development</h2>
+            <p class="modal-subtitle">Cross-platform apps built for performance and delight</p>
+
+            <div class="modal-divider"></div>
+
+            <p class="modal-body">
+                We design and develop mobile applications that users love. From idea validation to App Store submission, our team guides you through every phase. We specialize in cross-platform development to maximize reach while minimizing cost — without sacrificing the native feel your users expect.
+            </p>
+
+            <div class="modal-features">
+                <h3 class="modal-features-title">What's Included</h3>
+                <ul class="modal-feature-list">
+                    <li>
+                        <span class="feature-icon">✦</span>
+                        <div>
+                            <strong>Cross-Platform Development</strong>
+                            <p>Single codebase for iOS & Android using React Native or Flutter.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="feature-icon">✦</span>
+                        <div>
+                            <strong>UI/UX Design</strong>
+                            <p>Human-centered design with smooth animations and intuitive flows.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="feature-icon">✦</span>
+                        <div>
+                            <strong>Backend Integration</strong>
+                            <p>Seamless connection to REST APIs, GraphQL, and real-time data sources.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="feature-icon">✦</span>
+                        <div>
+                            <strong>Push Notifications & Analytics</strong>
+                            <p>Engage users with smart notifications and track behavior with analytics.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="feature-icon">✦</span>
+                        <div>
+                            <strong>App Store Publishing</strong>
+                            <p>Full deployment support for Google Play and Apple App Store.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <label class="modal-btn" for="toggle-mobile">Get Started →</label>
+        </div>
+    </div>
+
+    <!-- Modal: DevOps -->
+    <div class="modal-overlay" id="modal-devops">
+        <div class="modal-box">
+            <label class="modal-close" for="toggle-devops" aria-label="Close modal">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </label>
+
+            <div class="modal-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2a10 10 0 0 1 10 10c0 2.8-1.1 5.3-2.9 7.2"/>
+                    <path d="M12 22a10 10 0 0 1-10-10c0-2.8 1.1-5.3 2.9-7.2"/>
+                    <path d="M2 12h4M18 12h4M12 6V2M12 22v-4"/>
+                    <circle cx="12" cy="12" r="3"/>
+                </svg>
+            </div>
+
+            <h2 class="modal-title">DevOps Engineering</h2>
+            <p class="modal-subtitle">Automate, monitor, and scale with confidence</p>
+
+            <div class="modal-divider"></div>
+
+            <p class="modal-body">
+                We bridge the gap between development and operations, enabling your team to ship faster and more reliably. Our DevOps services cover everything from setting up automated pipelines to managing cloud infrastructure and ensuring your systems are always up, secure, and performing at their best.
+            </p>
+
+            <div class="modal-features">
+                <h3 class="modal-features-title">What's Included</h3>
+                <ul class="modal-feature-list">
+                    <li>
+                        <span class="feature-icon">✦</span>
+                        <div>
+                            <strong>CI/CD Pipeline Setup</strong>
+                            <p>Automated testing and deployment with GitHub Actions, Jenkins, or GitLab CI.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="feature-icon">✦</span>
+                        <div>
+                            <strong>Containerization</strong>
+                            <p>Dockerize applications and orchestrate with Kubernetes for scalable deployments.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="feature-icon">✦</span>
+                        <div>
+                            <strong>Cloud Infrastructure</strong>
+                            <p>Provision and manage infrastructure on AWS, GCP, or Azure using IaC tools.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="feature-icon">✦</span>
+                        <div>
+                            <strong>Monitoring & Alerting</strong>
+                            <p>Real-time dashboards with Grafana, Prometheus, and centralized logging.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="feature-icon">✦</span>
+                        <div>
+                            <strong>Security & Compliance</strong>
+                            <p>Vulnerability scanning, secret management, and infrastructure hardening.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <label class="modal-btn" for="toggle-devops">Get Started →</label>
+        </div>
+    </div>
+
 </body>
 </html>

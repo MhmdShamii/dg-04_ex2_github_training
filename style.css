@@ -50,9 +50,33 @@ body {
 
 /* Hero */
 .hero {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 100px 20px;
-    background-color: #f0fdf4;
+    padding: 60px 20px;
+    background-color: #f6fef9;
+    background-image: url("images/code-rain.svg");
+    animation: code-rain 8s linear infinite;
+}
+
+/* Moves the pattern down by one tile (240px) so the loop is seamless */
+@keyframes code-rain {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 240px;
+    }
+}
+
+/* Stop the animation for users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+    .hero {
+        animation: none;
+    }
 }
 
 .hero h1 {

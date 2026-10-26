@@ -3,10 +3,360 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Matrix – We build fast, reliable websites and apps to help your business grow.">
     <link rel="stylesheet" href="style.css">
-    <title>the Matrix</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>The Matrix – We Build Software That Works</title>
 </head>
 <body>
-    
+
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="top">
+        <a href="#home" class="logo" aria-label="The Matrix home">
+            <span class="logo-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 2L2 7l10 5 10-5-10-5Z"/>
+                    <path d="M2 17l10 5 10-5"/>
+                    <path d="M2 12l10 5 10-5"/>
+                </svg>
+            </span>
+            <span class="logo-text">The<strong>Matrix</strong></span>
+        </a>
+
+        <!-- Hidden checkbox that controls the mobile menu -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-burger" aria-label="Toggle navigation menu">
+            <span></span><span></span><span></span>
+        </label>
+
+        <nav class="nav" aria-label="Main navigation">
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#footer">About</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+            <a href="#footer" class="btn btn-primary nav-cta">Let's Code</a>
+        </nav>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="hero-badge">Software Development Agency</span>
+            <h1 class="hero-title">We Build Software<br><span class="hero-highlight">That Works</span></h1>
+            <p class="hero-desc">
+                The Matrix is a software development company that creates fast,
+                reliable websites and apps to help your business grow.
+            </p>
+            <div class="hero-actions">
+                <a href="#services" class="btn btn-primary">Explore Services</a>
+                <a href="#footer" class="btn btn-outline">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hidden checkboxes that control modal visibility -->
+    <input type="checkbox" id="toggle-fullstack" class="modal-toggle">
+    <input type="checkbox" id="toggle-mobile"    class="modal-toggle">
+    <input type="checkbox" id="toggle-devops"    class="modal-toggle">
+
+    <!-- ===== SERVICES SECTION ===== -->
+    <section class="services-section" id="services">
+
+        <!-- Section Header -->
+        <div class="section-header">
+            <span class="section-badge">What We Do</span>
+            <h2 class="section-title">Our <span class="highlight">Services</span></h2>
+            <p class="section-subtitle">
+                We craft digital experiences that drive results. Click any service to discover how we can help you grow.
+            </p>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="cards-grid">
+
+            <!-- Card 1: Full Stack Website -->
+            <label class="service-card" for="toggle-fullstack" tabindex="0" role="button" aria-label="Learn more about Full Stack Website development">
+                <div class="card-glow"></div>
+                <div class="card-icon-wrapper">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2"/>
+                            <path d="M8 21h8M12 17v4"/>
+                            <path d="m7 10 3 3 7-7"/>
+                        </svg>
+                    </div>
+                </div>
+                <h3 class="card-title">Full Stack Website</h3>
+                <p class="card-desc">End-to-end web solutions — from pixel-perfect frontends to robust, scalable backends.</p>
+                <ul class="card-tags">
+                    <li>React / Next.js</li>
+                    <li>Node.js / APIs</li>
+                    <li>Databases</li>
+                </ul>
+                <div class="card-cta">
+                    <span>Explore Service</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </div>
+            </label>
+
+            <!-- Card 2: Mobile App (Featured) -->
+            <label class="service-card featured" for="toggle-mobile" tabindex="0" role="button" aria-label="Learn more about Mobile App development">
+                <div class="card-glow"></div>
+                <div class="featured-badge">Most Popular</div>
+                <div class="card-icon-wrapper">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="5" y="2" width="14" height="20" rx="2"/>
+                            <circle cx="12" cy="18" r="1"/>
+                            <path d="M9 6h6"/>
+                        </svg>
+                    </div>
+                </div>
+                <h3 class="card-title">Mobile App</h3>
+                <p class="card-desc">Native and cross-platform apps that deliver seamless experiences on iOS and Android.</p>
+                <ul class="card-tags">
+                    <li>React Native</li>
+                    <li>Flutter</li>
+                    <li>iOS &amp; Android</li>
+                </ul>
+                <div class="card-cta">
+                    <span>Explore Service</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </div>
+            </label>
+
+            <!-- Card 3: DevOps -->
+            <label class="service-card" for="toggle-devops" tabindex="0" role="button" aria-label="Learn more about DevOps services">
+                <div class="card-glow"></div>
+                <div class="card-icon-wrapper">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2a10 10 0 0 1 10 10c0 2.8-1.1 5.3-2.9 7.2"/>
+                            <path d="M12 22a10 10 0 0 1-10-10c0-2.8 1.1-5.3 2.9-7.2"/>
+                            <path d="M2 12h4M18 12h4M12 6V2M12 22v-4"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                    </div>
+                </div>
+                <h3 class="card-title">DevOps</h3>
+                <p class="card-desc">Automate, deploy, and scale your infrastructure with modern CI/CD pipelines and cloud solutions.</p>
+                <ul class="card-tags">
+                    <li>CI/CD Pipelines</li>
+                    <li>Docker / K8s</li>
+                    <li>Cloud &amp; Monitoring</li>
+                </ul>
+                <div class="card-cta">
+                    <span>Explore Service</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </div>
+            </label>
+
+        </div><!-- /cards-grid -->
+    </section>
+
+    <!-- ===== MODALS ===== -->
+
+    <!-- Modal: Full Stack Website -->
+    <div class="modal-overlay" id="modal-fullstack">
+        <div class="modal-box">
+            <label class="modal-close" for="toggle-fullstack" aria-label="Close modal">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </label>
+            <div class="modal-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2"/>
+                    <path d="M8 21h8M12 17v4"/>
+                    <path d="m7 10 3 3 7-7"/>
+                </svg>
+            </div>
+            <h2 class="modal-title">Full Stack Website Development</h2>
+            <p class="modal-subtitle">Complete web solutions from concept to deployment</p>
+            <div class="modal-divider"></div>
+            <p class="modal-body">
+                We build high-performance, fully responsive websites that look stunning and function flawlessly. Our team handles everything — from crafting intuitive user interfaces to engineering powerful server-side systems and secure databases. Whether you need a landing page, a SaaS platform, or a large-scale enterprise web application, we deliver with precision and speed.
+            </p>
+            <div class="modal-features">
+                <h3 class="modal-features-title">What's Included</h3>
+                <ul class="modal-feature-list">
+                    <li><span class="feature-icon">✦</span><div><strong>Frontend Development</strong><p>Modern UIs with React, Next.js, or Vue — fully responsive and accessible.</p></div></li>
+                    <li><span class="feature-icon">✦</span><div><strong>Backend &amp; REST APIs</strong><p>Scalable server-side logic with Node.js, Express, or Django.</p></div></li>
+                    <li><span class="feature-icon">✦</span><div><strong>Database Architecture</strong><p>Efficient schema design using PostgreSQL, MongoDB, or Firebase.</p></div></li>
+                    <li><span class="feature-icon">✦</span><div><strong>Authentication &amp; Security</strong><p>Robust auth systems, role-based access control, and data encryption.</p></div></li>
+                    <li><span class="feature-icon">✦</span><div><strong>Performance Optimization</strong><p>Fast load times, SEO-ready markup, and Core Web Vitals compliance.</p></div></li>
+                </ul>
+            </div>
+            <label class="modal-btn" for="toggle-fullstack">Get Started →</label>
+        </div>
+    </div>
+
+    <!-- Modal: Mobile App -->
+    <div class="modal-overlay" id="modal-mobile">
+        <div class="modal-box">
+            <label class="modal-close" for="toggle-mobile" aria-label="Close modal">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </label>
+            <div class="modal-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="5" y="2" width="14" height="20" rx="2"/>
+                    <circle cx="12" cy="18" r="1"/>
+                    <path d="M9 6h6"/>
+                </svg>
+            </div>
+            <h2 class="modal-title">Mobile App Development</h2>
+            <p class="modal-subtitle">Cross-platform apps built for performance and delight</p>
+            <div class="modal-divider"></div>
+            <p class="modal-body">
+                We design and develop mobile applications that users love. From idea validation to App Store submission, our team guides you through every phase. We specialize in cross-platform development to maximize reach while minimizing cost — without sacrificing the native feel your users expect.
+            </p>
+            <div class="modal-features">
+                <h3 class="modal-features-title">What's Included</h3>
+                <ul class="modal-feature-list">
+                    <li><span class="feature-icon">✦</span><div><strong>Cross-Platform Development</strong><p>Single codebase for iOS &amp; Android using React Native or Flutter.</p></div></li>
+                    <li><span class="feature-icon">✦</span><div><strong>UI/UX Design</strong><p>Human-centered design with smooth animations and intuitive flows.</p></div></li>
+                    <li><span class="feature-icon">✦</span><div><strong>Backend Integration</strong><p>Seamless connection to REST APIs, GraphQL, and real-time data sources.</p></div></li>
+                    <li><span class="feature-icon">✦</span><div><strong>Push Notifications &amp; Analytics</strong><p>Engage users with smart notifications and track behavior with analytics.</p></div></li>
+                    <li><span class="feature-icon">✦</span><div><strong>App Store Publishing</strong><p>Full deployment support for Google Play and Apple App Store.</p></div></li>
+                </ul>
+            </div>
+            <label class="modal-btn" for="toggle-mobile">Get Started →</label>
+        </div>
+    </div>
+
+    <!-- Modal: DevOps -->
+    <div class="modal-overlay" id="modal-devops">
+        <div class="modal-box">
+            <label class="modal-close" for="toggle-devops" aria-label="Close modal">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </label>
+            <div class="modal-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2a10 10 0 0 1 10 10c0 2.8-1.1 5.3-2.9 7.2"/>
+                    <path d="M12 22a10 10 0 0 1-10-10c0-2.8 1.1-5.3 2.9-7.2"/>
+                    <path d="M2 12h4M18 12h4M12 6V2M12 22v-4"/>
+                    <circle cx="12" cy="12" r="3"/>
+                </svg>
+            </div>
+            <h2 class="modal-title">DevOps Engineering</h2>
+            <p class="modal-subtitle">Automate, monitor, and scale with confidence</p>
+            <div class="modal-divider"></div>
+            <p class="modal-body">
+                We bridge the gap between development and operations, enabling your team to ship faster and more reliably. Our DevOps services cover everything from setting up automated pipelines to managing cloud infrastructure and ensuring your systems are always up, secure, and performing at their best.
+            </p>
+            <div class="modal-features">
+                <h3 class="modal-features-title">What's Included</h3>
+                <ul class="modal-feature-list">
+                    <li><span class="feature-icon">✦</span><div><strong>CI/CD Pipeline Setup</strong><p>Automated testing and deployment with GitHub Actions, Jenkins, or GitLab CI.</p></div></li>
+                    <li><span class="feature-icon">✦</span><div><strong>Containerization</strong><p>Dockerize applications and orchestrate with Kubernetes for scalable deployments.</p></div></li>
+                    <li><span class="feature-icon">✦</span><div><strong>Cloud Infrastructure</strong><p>Provision and manage infrastructure on AWS, GCP, or Azure using IaC tools.</p></div></li>
+                    <li><span class="feature-icon">✦</span><div><strong>Monitoring &amp; Alerting</strong><p>Real-time dashboards with Grafana, Prometheus, and centralized logging.</p></div></li>
+                    <li><span class="feature-icon">✦</span><div><strong>Security &amp; Compliance</strong><p>Vulnerability scanning, secret management, and infrastructure hardening.</p></div></li>
+                </ul>
+            </div>
+            <label class="modal-btn" for="toggle-devops">Get Started →</label>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="footer">
+
+        <div class="footer-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" preserveAspectRatio="none">
+                <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#166534"/>
+            </svg>
+        </div>
+
+        <div class="footer-inner">
+
+            <div class="footer-brand">
+                <a href="#home" class="footer-logo" aria-label="The Matrix home">
+                    <span class="footer-logo-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2L2 7l10 5 10-5-10-5Z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </span>
+                    <span>The<strong>Matrix</strong></span>
+                </a>
+                <p class="footer-tagline">
+                    We build digital products that inspire, perform, and scale — from idea to deployment.
+                </p>
+                <div class="footer-socials">
+                    <a href="#" class="social-link" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.185 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.2 22 16.447 22 12.021 22 6.484 17.523 2 12 2Z"/></svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57A1.46 1.46 0 0 1 14.38 12.11A1.46 1.46 0 0 1 15.84 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z"/></svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter / X">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117Z"/></svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069ZM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0Zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324ZM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881Z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <div class="footer-nav-col">
+                    <h4 class="footer-nav-heading">Services</h4>
+                    <ul>
+                        <li><a href="#services">Full Stack Website</a></li>
+                        <li><a href="#services">Mobile App</a></li>
+                        <li><a href="#services">DevOps</a></li>
+                        <li><a href="#">UI / UX Design</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav-col">
+                    <h4 class="footer-nav-heading">Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Work</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav-col">
+                    <h4 class="footer-nav-heading">Contact</h4>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span>Cairo, Egypt</span>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            <a href="mailto:hello@thematrix.dev">hello@thematrix.dev</a>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.06 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
+                            <a href="tel:+201234567890">+20 123 456 7890</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-copy">&copy; 2026 The Matrix. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <span class="footer-dot">·</span>
+                <a href="#">Terms of Service</a>
+                <span class="footer-dot">·</span>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+
+    </footer>
+
 </body>
 </html>

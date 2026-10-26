@@ -14,16 +14,30 @@
     <!-- ===== HEADER ===== -->
     <header class="header" id="top">
         <a href="#home" class="logo" aria-label="The Matrix home">
-            the <span>Matrix</span>
+            <span class="logo-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 2L2 7l10 5 10-5-10-5Z"/>
+                    <path d="M2 17l10 5 10-5"/>
+                    <path d="M2 12l10 5 10-5"/>
+                </svg>
+            </span>
+            <span class="logo-text">The<strong>Matrix</strong></span>
         </a>
-        <nav aria-label="Main navigation">
+
+        <!-- Hidden checkbox that controls the mobile menu -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-burger" aria-label="Toggle navigation menu">
+            <span></span><span></span><span></span>
+        </label>
+
+        <nav class="nav" aria-label="Main navigation">
             <ul class="nav-list">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#footer">About</a></li>
+                <li><a href="#footer">Contact</a></li>
             </ul>
+            <a href="#footer" class="btn btn-primary nav-cta">Get Started</a>
         </nav>
     </header>
 
@@ -38,7 +52,7 @@
             </p>
             <div class="hero-actions">
                 <a href="#services" class="btn btn-primary">Explore Services</a>
-                <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                <a href="#footer" class="btn btn-outline">Get In Touch</a>
             </div>
         </div>
     </section>

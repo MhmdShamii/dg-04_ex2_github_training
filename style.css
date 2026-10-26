@@ -55,7 +55,10 @@
    ============================================================ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-h); /* keep anchored sections clear of the sticky header */
+}
 
 body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -92,25 +95,79 @@ body {
 }
 
 .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     font-size: 1.35rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--gray-900);
     text-decoration: none;
     letter-spacing: -0.02em;
     transition: opacity var(--transition-fast);
 }
 
-.logo:hover { opacity: 0.75; }
+.logo:hover { opacity: 0.8; }
 
-.logo span {
+.logo-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--green-600), var(--green-400));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 14px rgba(22,163,74,.30);
+    transition: transform var(--transition);
+}
+
+.logo:hover .logo-icon { transform: rotate(-8deg) scale(1.06); }
+
+.logo-icon svg { width: 18px; height: 18px; color: var(--white); }
+
+.logo strong {
     color: var(--green-600);
     font-weight: 800;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 36px;
 }
 
 .nav-list {
     display: flex;
     gap: 32px;
     list-style: none;
+}
+
+.nav-cta { padding: 10px 20px; font-size: 0.88rem; }
+
+/* Mobile menu toggle (CSS checkbox hack) — hidden on desktop */
+.nav-toggle { display: none; }
+
+.nav-burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 0 9px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background var(--transition-fast);
+}
+
+.nav-burger:hover { background: var(--green-100); }
+
+.nav-burger span {
+    display: block;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--gray-900);
+    transition: transform var(--transition-fast), opacity var(--transition-fast);
 }
 
 .nav-list a {
@@ -136,8 +193,18 @@ body {
     transition: width var(--transition-fast);
 }
 
-.nav-list a:hover { color: var(--green-600); }
-.nav-list a:hover::after { width: 100%; }
+.nav-list a:hover,
+.nav-list a:focus-visible { color: var(--green-600); }
+.nav-list a:hover::after,
+.nav-list a:focus-visible::after { width: 100%; }
+
+.logo:focus-visible,
+.nav-list a:focus-visible,
+.nav-cta:focus-visible {
+    outline: 2px solid var(--green-500);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
 
 /* ============================================================
    4. HERO
@@ -952,15 +1019,47 @@ body {
     .modal-title      { font-size: 1.35rem; }
 }
 
+/* Mobile header: collapse nav into a dropdown menu */
+@media (max-width: 768px) {
+    .nav-burger { display: flex; }
+
+    .nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+        padding: 16px 20px 24px;
+        background: rgba(255,255,255,.98);
+        border-bottom: 1px solid var(--green-100);
+        box-shadow: var(--shadow-md);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+        transition: opacity var(--transition-fast), transform var(--transition-fast), visibility var(--transition-fast);
+    }
+
+    .nav-list { flex-direction: column; gap: 0; }
+    .nav-list a { display: block; padding: 12px 4px; }
+    .nav-list a::after { display: none; }
+    .nav-cta { justify-content: center; padding: 12px 20px; }
+
+    .nav-toggle:checked ~ .nav {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    /* Burger → X */
+    .nav-toggle:checked + .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle:checked + .nav-burger span:nth-child(2) { opacity: 0; }
+    .nav-toggle:checked + .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+}
+
 /* Mobile portrait */
 @media (max-width: 600px) {
-    .header {
-        flex-direction: column;
-        height: auto;
-        padding: 16px 20px;
-        gap: 12px;
-    }
-    .nav-list { gap: 20px; }
     .footer-nav { grid-template-columns: 1fr 1fr; }
     .footer-bottom {
         flex-direction: column;
